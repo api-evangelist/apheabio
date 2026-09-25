@@ -1,23 +1,77 @@
 aid: apheabio
+
 name: Apheabio
-description: 'Apheabio is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Apheabio (Aphea.Bio) develops innovative biocontrol and biostimulant products for sustainable agriculture. Leveraging its APEXbio™ R&D platform, the company creates microbial‑based solutions that integrate with conventional and organic crop protection, aiming to improve yields, resilience, and environmental outcomes across the agricultural sector.'
+
 url: https://raw.githubusercontent.com/api-evangelist/apheabio/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
 - Company
-apis: []
+- Agriculture
+- Biotech
+- Sustainability
+- Biostimulants
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/apheabio-hosts.yml
+- type: Vendors
+  url: vendors/apheabio-vendors.yml
+- type: Newsroom
+  url: https://www.aphea.bio/news
+- type: DomainSecurity
+  url: security/apheabio-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/apheabio
+  url: https://www.aphea.bio
+
+- type: PrivacyPolicy
+  url: https://www.aphea.bio/privacy-policy
+- type: TermsOfService
+  url: https://www.aphea.bio/terms-and-conditions
+- type: AboutUs
+  url: https://www.aphea.bio/company/about-us
+- type: Products
+  url: https://www.aphea.bio/products
+- type: Technology
+  url: https://www.aphea.bio/technology
+- type: Careers
+  url: https://www.aphea.bio/company/careers
+- type: Sustainability
+  url: https://www.aphea.bio/company/sustainability
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other machine-readable contract found at api.aphea.bio.
+  evidence:
+    - url: https://api.aphea.bio/openapi.json
+      status: no-response
+  checked: 2026-09-25
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
